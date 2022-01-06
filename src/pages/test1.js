@@ -1,12 +1,15 @@
 import { useState } from "react";
 
 const FetchData = () => {
-    const [data, setData] = useState('')
-    fetch("https://dry-bird-b7f1.debjit.workers.dev/")
-      .then((response) => response.json())
-      .then((json) => {
-        setData(json);       
-      });
+    // const [data, setData] = useState('')
+    // fetch("https://dry-bird-b7f1.debjit.workers.dev/")
+    //   .then((response) => response.json())
+    //   .then((json) => {
+    //     setData(json);       
+    //   });
+    const data = {
+        name: 'debjit'
+    };
       return (
         <div>
         Name: {data.name}
