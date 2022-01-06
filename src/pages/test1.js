@@ -7,12 +7,13 @@ const FetchData = () => {
       .then((json) => {
         console.log(json);       
       });
-    const data = {
+      
+    const data2 = {
         name: 'debjit'
     };
       return (
         <div>
-        Name: {data.name}
+        Name: {data2.name}
 
         </div>
       )
