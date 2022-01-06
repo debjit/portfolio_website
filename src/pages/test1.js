@@ -1,17 +1,18 @@
 import { useState } from "react";
 
-function getApiData() {
-    const [data, setData] = useState('')
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((json) => {
-        console.log(json);       
-        setData(json);
-      });
-}
+
 
 const FetchData = () => {
-    
+    const [data, setData] = useState('')
+
+    function getApiData() {
+        fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => response.json())
+        .then((json) => {
+            console.log(json);       
+            setData(json);
+        });
+    }
       
     const data2 = {
         name: 'debjit'
@@ -20,8 +21,8 @@ const FetchData = () => {
         <div>
         Name: {data2.name}
         <button onClick={getApiData}>Fetch API Data</button>
-        <div>
         <br />
+        <div>
         <ul>
           {data.map((item) => (
             <li key={item.id}>
